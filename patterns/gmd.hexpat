@@ -1,5 +1,5 @@
 #pragma author DmitriLeon2000
-#pragma description Game Maker 4.x-6.1A data (GMD/GM6)
+#pragma description Game Maker 4.0-6.1A data (GMD/GMR/GM6)
 #pragma endian little
 #pragma magic [ 91 D5 12 00 ] @ 0x00;
 
@@ -957,12 +957,7 @@ struct GMD {
     s32 version_verify_resource_tree;
     u32 active_room_count;
     u32 active_room_ids[active_room_count];
-    match (version_verify_resource_tree) {
-        (400 | 411): TreeNode resource_tree[8];
-        (420): TreeNode resource_tree[9];
-        (430): TreeNode resource_tree[10];
-        (_): TreeNode resource_tree[11];
-    }
+    TreeNode resource_tree[while(!std::mem::eof())];
 };
 
 GMD gmd @ 0x0;
