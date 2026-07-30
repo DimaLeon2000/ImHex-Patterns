@@ -815,7 +815,7 @@ struct GameOptions {
     if (version_verify >= 500) {
         PascalString author;
         s32 game_version;
-        u64 datetime_changed;
+        double date_changed;
         PascalString information;
     }
     if (version_verify >= 530) {
